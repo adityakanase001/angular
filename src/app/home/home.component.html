@@ -1,0 +1,24 @@
+<div class="table-responsive">
+    
+    <button type="button" class="btn btn-success" (click)="toInsert()">Add Employee</button>
+    <hr><hr>
+    <table class="table">
+        <thead>
+            <td><b>Emp No</b></td>
+            <td><b>Emp Name</b></td>
+            <td><b>Emp age</b></td>
+        </thead>
+        
+        <tr *ngFor="let emp of emps">
+            <td>{{emp.No}}</td>
+            <td>{{emp.Name}}</td>
+            <td>{{emp.Age}}</td>
+            <td>
+                <a routerLink="/edit/{{emp.No}}">Edit</a>
+            </td>
+            <td>
+                <a routerLink="/delete/{{emp.No}}">Delete</a>
+            </td>
+        </tr>
+    </table>
+</div>
